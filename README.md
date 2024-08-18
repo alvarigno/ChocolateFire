@@ -3,7 +3,13 @@ Máquina DockerLab
 
 ## Reconocimiento
 
-Una vez iniciada la maáquina con Dockers, podemos revisar que contiene la máquina usando nmap y el siguiente script.
+Una vez iniciada la máquina con Dockers, y conociendo que la ip es: 172.17.0.2, podemos revisar que contiene por medio del browser.
+
+![Captura de pantalla del página del servidor](images/Image_step_01_00.png)
+
+## Escaneo y enumeración
+
+Ahora podemos revisar que contiene la máquina usando nmap y el siguiente script.
 
 ```
 nmap -sV --script vuln --host-timeout 2500 -oN scan_v1_172.17.0.2.txt 172.17.0.2
@@ -232,14 +238,52 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 Dentro de los puertos curiosos es el 9090, donde podemos acceder por el browser a la sigueinte página de acceso:
 
+
 > Probando con el usuario Admin, podemos ingresar a revisar la web indicada.
 
 ![Captura de pantalla del página de acceso](images/Image_step_01.png)
 
+Al ingresar con el usuario señalado, vemos que tenemos bastante información, dentro de las cuales podemos destacar la versión de OpenFire.
 
-## Escaneo y enumeración
+![Captura de pantalla del página de acceso](images/Image_step_03.png)
+
+### Vulnerabilidad destacada
+
+Una vez, que obtenemos la version de OpenFire 4.7.4, podemos buscar si tiene alguna vulenrabilidad. De esta forma:
+
+![Captura de pantalla del resultado de búsqueda](images/Image_step_04.png)
+
+Dentro del resuñtado obtenido podemos ver que existe el "CVE-2023-32315", que tiene relación a un RCE (Remote Code Execution).
+
+https://www.rapid7.com/db/modules/exploit/multi/http/openfire_auth_bypass_rce_cve_2023_32315/
+
+Con lo anterior en vista, podemos revisar dentro de msfConsole, que podemos encontrar.
 
 ## Ganar Acceso
 
+Dentro de msfconsole, podemos buscar que obtenemos con openfire
 
+```
+search openfire
+```
+
+![Captura de pantalla del listado de msfconsole](images/Image_step_05.png)
+
+Vemos que msf posee 4 exploit disponibles para openfire, y el n. 4 es realcionado al resultado del CVE entronado en el reconocimiento.
+
+![Captura de pantalla seleccion de exploit](images/Image_step_06.png)
+
+Configuramos los parámetros que nos solicita el exploit, tal como se muestra en la siguiente imagen:
+
+![Captura de pantalla config, parámetros de exploit](images/Image_step_07.png)
+
+Ahora vamos a ejecutar el exploit, y vemos que obtenemos acceso root a la máquina vulnerable con Openfire 4.7.4.
+
+![Captura de pantalla config, parámetros de exploit](images/Image_step_08.png)
+
+A nivel de openfire por browser, podemos ver que el usuario "lgatptyrk", fue creado por el exploit y elevado los privilegios a nivel de root dentro de la máquina objetivo. Además, podemos verificar que el mismo usuario fue creado de forma correcta en el browser, indicando que el usuario creado por el exploit, nunca antes había accesado a la máquina.
+
+![Captura de pantalla config, parámetros de exploit](images/Image_step_09.png)
+
+Espero les guste esta máquina.
 
