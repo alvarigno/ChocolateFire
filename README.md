@@ -234,7 +234,7 @@ Dentro de los puertos curiosos es el 9090, donde podemos acceder por el browser 
 
 > Probando con el usuario Admin, podemos ingresar a revisar la web indicada.
 
-![Captura de pantalla del página de acceso](https://alvarigno.github.io/ChocolateFire-DockerLab/images/Image_step_01.png)
+![Captura de pantalla del página de acceso](images/Image_step_01.png)
 
 
 ## Escaneo y enumeración
