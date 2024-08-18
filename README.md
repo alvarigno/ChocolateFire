@@ -230,9 +230,11 @@ Service detection performed. Please report any incorrect results at https://nmap
 
 ```
 
-> dentro de los puertos curiosos es el 9090, donde podemos acceder por el browser a la sigueinte página de acceso:
+Dentro de los puertos curiosos es el 9090, donde podemos acceder por el browser a la sigueinte página de acceso:
 
+> Probando con el usuario Admin, podemos ingresar a revisar la web indicada.
 
+![Captura de pantalla del página de acceso](https://alvarigno.github.io/ChocolateFire-DockerLab/images/Image_step_01.png)
 
 
 ## Escaneo y enumeración
