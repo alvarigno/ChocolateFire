@@ -269,7 +269,7 @@ search openfire
 
 ![Captura de pantalla del listado de msfconsole](images/Image_step_05.png)
 
-Vemos que msf posee 4 exploit disponibles para openfire, y el n. 4 es realcionado al resultado del CVE entronado en el reconocimiento.
+Vemos que msf posee 4 exploit disponibles para openfire, y el n. 4 es realcionado al resultado del CVE encontrado en el reconocimiento.
 
 ![Captura de pantalla seleccion de exploit](images/Image_step_06.png)
 
