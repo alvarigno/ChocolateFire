@@ -249,7 +249,7 @@ Al ingresar con el usuario señalado, vemos que tenemos bastante información, d
 
 ### Vulnerabilidad destacada
 
-Una vez, que obtenemos la version de OpenFire 4.7.4, podemos buscar si tiene alguna vulenrabilidad. De esta forma:
+Una vez, que obtenemos la version de OpenFire 4.7.4, podemos buscar si tiene alguna vulnerabilidad. De esta forma:
 
 ![Captura de pantalla del resultado de búsqueda](images/Image_step_04.png)
 
@@ -257,7 +257,7 @@ Dentro del resuñtado obtenido podemos ver que existe el "CVE-2023-32315", que t
 
 https://www.rapid7.com/db/modules/exploit/multi/http/openfire_auth_bypass_rce_cve_2023_32315/
 
-Con lo anterior en vista, podemos revisar dentro de msfConsole, que podemos encontrar.
+Con lo anterior en vista, podemos revisar dentro de msfConsole, que podemos encontrar.  
 
 ## Ganar Acceso
 
