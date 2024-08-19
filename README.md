@@ -255,7 +255,7 @@ Una vez, que obtenemos la version de OpenFire 4.7.4, podemos buscar si tiene alg
 
 ![Captura de pantalla del resultado de búsqueda](images/Image_step_04.png)
 
-Dentro del resuñtado obtenido podemos ver que existe el "CVE-2023-32315", que tiene relación a un RCE (Remote Code Execution).
+Dentro del resultado obtenido podemos ver que existe el "CVE-2023-32315", que tiene relación a un RCE (Remote Code Execution).
 
 https://www.rapid7.com/db/modules/exploit/multi/http/openfire_auth_bypass_rce_cve_2023_32315/
 
@@ -283,7 +283,7 @@ Ahora vamos a ejecutar el exploit, y vemos que obtenemos acceso root a la máqui
 
 ![Captura de pantalla config, parámetros de exploit](images/Image_step_08.png)
 
-A nivel de openfire por browser, podemos ver que el usuario "lgatptyrk", fue creado por el exploit y elevado los privilegios a nivel de root dentro de la máquina objetivo. Además, podemos verificar que el mismo usuario fue creado de forma correcta en el browser, indicando que el usuario creado por el exploit, nunca antes había accesado a la máquina.
+A nivel de openfire por browser, podemos ver que el usuario "lgatptyrk", fue creado por el exploit y elevado los privilegios a nivel de root dentro de la máquina objetivo. Además, podemos verificar que el mismo usuario fue creado de forma correcta en el browser, verificando que el usuario creado por el exploit, nunca antes había accesado a la máquina.
 
 ![Captura de pantalla config, parámetros de exploit](images/Image_step_09.png)
 
