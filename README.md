@@ -1,6 +1,8 @@
 # ChocolateFire
 Máquina DockerLab
 
+![Captura de pantalla maquina chocolateFire - Dockerlab](images/Image_step_home.png)
+
 ## Reconocimiento
 
 Una vez iniciada la máquina con Dockers, y conociendo que la ip es: 172.17.0.2, podemos revisar que contiene por medio del browser.
